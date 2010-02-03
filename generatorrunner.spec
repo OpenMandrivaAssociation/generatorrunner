@@ -10,9 +10,8 @@ Patch0: generatorrunner-0.3.3-cmake-install-module.patch
 BuildRoot: %{_tmppath}/%{name}-%{version}-root
 BuildRequires: cmake
 BuildRequires: qt4-devel
-BuildRequires: boost-devel
 BuildRequires: apiextractor-devel >= 0.3.3
-BuildRequires: openssl-devel
+Conflicts: %{_lib}gen0 < 0.3.3
 
 %description
 Generator is a utility that parses a collecion of header and typesystem
@@ -30,11 +29,11 @@ files, generating other files (code, documentation, etc.) as result.
 %define libgen %mklibname genrunner %{libgen_major}
 
 %package -n %{libgen}
-Summary: boostpythongenerator core lib
+Summary: Generator core lib
 Group: System/Libraries
 
 %description -n %{libgen}
-Boostpythongenerator core lib.
+Generator core lib.
 
 %files -n %{libgen}
 %defattr(-,root,root)
@@ -43,14 +42,15 @@ Boostpythongenerator core lib.
 #------------------------------------------------------------------------------
 
 %package devel
-Summary: Devel stuff for boostpythongenerator
+Summary: Devel stuff for Generator
 Group: Development/KDE and Qt
 Requires: %{libgen} = %{version}
-Requires: apiextractor-devel >= 0.3
+Requires: apiextractor-devel >= 0.3.3
 Requires: %name = %{version}
+Obsoletes: boostpythongenerator-devel < 0.3.3
 
 %description devel
-Devel stuff for boostpythongenerator.
+Devel stuff for Generator.
 
 %files devel
 %defattr(-,root,root)

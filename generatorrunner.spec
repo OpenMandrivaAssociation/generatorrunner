@@ -1,6 +1,6 @@
 Name: generatorrunner
 Version: 0.3.3
-Release: %mkrel 1
+Release: %mkrel 2
 License: GPLv2
 Summary: A utility that parses header and typesystem files
 Group: Development/KDE and Qt
@@ -12,6 +12,7 @@ BuildRequires: cmake
 BuildRequires: qt4-devel
 BuildRequires: apiextractor-devel >= 0.3.3
 Conflicts: %{_lib}gen0 < 0.3.3
+Conflicts: boostpythongenerator < 0.3.3
 
 %description
 Generator is a utility that parses a collecion of header and typesystem

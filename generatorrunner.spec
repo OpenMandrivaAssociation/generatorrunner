@@ -1,18 +1,17 @@
 Name: generatorrunner
-Version: 0.3.3
-Release: %mkrel 2
+Version: 0.6.0
+Release: %mkrel 1
 License: GPLv2
 Summary: A utility that parses header and typesystem files
 Group: Development/KDE and Qt
 URL: http://www.pyside.org
 Source0:  http://www.pyside.org/files/%name-%version.tar.bz2
-Patch0: generatorrunner-0.3.3-cmake-install-module.patch
 BuildRoot: %{_tmppath}/%{name}-%{version}-root
 BuildRequires: cmake
 BuildRequires: qt4-devel
-BuildRequires: apiextractor-devel >= 0.3.3
+BuildRequires: apiextractor-devel >= 0.7.0
 Conflicts: %{_lib}gen0 < 0.3.3
-Conflicts: boostpythongenerator < 0.3.3
+Obsoletes: boostpythongenerator < 0.6.0
 
 %description
 Generator is a utility that parses a collecion of header and typesystem
@@ -58,13 +57,12 @@ Devel stuff for Generator.
 %{_includedir}/*
 %{_libdir}/libgenrunner.so
 %{_libdir}/pkgconfig/*
-%{_datadir}/cmake/Modules/*
+%{_libdir}/cmake/*
 
 #------------------------------------------------------------------------------
 
 %prep
 %setup -q
-%patch0 -p0 -b .install
 
 %build
 %cmake

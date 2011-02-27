@@ -1,6 +1,6 @@
 Name: generatorrunner
 Version: 0.6.5
-Release: %mkrel 1
+Release: %mkrel 2
 License: GPLv2
 Summary: A utility that parses header and typesystem files
 Group: Development/KDE and Qt

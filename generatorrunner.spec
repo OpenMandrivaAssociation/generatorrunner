@@ -1,5 +1,5 @@
 Name: generatorrunner
-Version: 0.6.6
+Version: 0.6.7
 Release: %mkrel 1
 License: GPLv2
 Summary: A utility that parses header and typesystem files

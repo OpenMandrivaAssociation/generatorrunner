@@ -1,5 +1,5 @@
 Name: generatorrunner
-Version: 0.6.9
+Version: 0.6.10
 Release: %mkrel 1
 License: GPLv2
 Summary: A utility that parses header and typesystem files
@@ -9,7 +9,7 @@ Source0:  http://www.pyside.org/files/%name-%version.tar.bz2
 BuildRoot: %{_tmppath}/%{name}-%{version}-root
 BuildRequires: cmake
 BuildRequires: qt4-devel
-BuildRequires: apiextractor-devel >= 0.10.2
+BuildRequires: apiextractor-devel >= 0.10.3
 Conflicts: %{_lib}gen0 < 0.3.3
 Obsoletes: boostpythongenerator < 0.6.0
 

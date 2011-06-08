@@ -1,6 +1,6 @@
 Name: generatorrunner
 Version: 0.6.10
-Release: %mkrel 1
+Release: 2
 License: GPLv2
 Summary: A utility that parses header and typesystem files
 Group: Development/KDE and Qt
@@ -65,6 +65,7 @@ Devel stuff for Generator.
 %setup -q
 
 %build
+sed 's/-Wno-strict-aliasing/-fno-strict-aliasing/' -i CMakeLists.txt
 %cmake
 %make
 

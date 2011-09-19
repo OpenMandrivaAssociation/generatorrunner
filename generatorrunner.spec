@@ -1,6 +1,6 @@
 Name: generatorrunner
 Version: 0.6.11
-Release: 1
+Release: 2
 License: GPLv2
 Summary: A utility that parses header and typesystem files
 Group: Development/KDE and Qt
@@ -18,8 +18,7 @@ Generator is a utility that parses a collecion of header and typesystem
 files, generating other files (code, documentation, etc.) as result.
 
 %files 
-%defattr(-,root,root,-)
-%_bindir/*
+%{_bindir}/*
 %{_libdir}/generatorrunner
 %{_mandir}/man1/*.1.*
 
@@ -36,7 +35,6 @@ Group: System/Libraries
 Generator core lib.
 
 %files -n %{libgen}
-%defattr(-,root,root)
 %{_libdir}/libgenrunner.so.%{libgen_major}*
 
 #------------------------------------------------------------------------------
@@ -53,7 +51,6 @@ Obsoletes: boostpythongenerator-devel < 0.3.3
 Devel stuff for Generator.
 
 %files devel
-%defattr(-,root,root)
 %{_includedir}/*
 %{_libdir}/libgenrunner.so
 %{_libdir}/pkgconfig/*
@@ -70,9 +67,4 @@ sed 's/-Wno-strict-aliasing/-fno-strict-aliasing/' -i CMakeLists.txt
 %make
 
 %install
-rm -rf %{buildroot}
 %makeinstall_std -C build
-
-%clean
-rm -rf %buildroot
-

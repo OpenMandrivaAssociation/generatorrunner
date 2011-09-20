@@ -8,7 +8,7 @@ URL: http://www.pyside.org
 Source0:  http://www.pyside.org/files/%name-%version.tar.bz2
 BuildRequires: cmake
 BuildRequires: qt4-devel
-BuildRequires: apiextractor-devel >= 0.10.4
+BuildRequires: apiextractor-devel >= 0.10.6
 Conflicts: %{_lib}gen0 < 0.3.3
 Obsoletes: boostpythongenerator < 0.6.0
 

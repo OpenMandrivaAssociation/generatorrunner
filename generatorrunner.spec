@@ -1,5 +1,5 @@
 Name: generatorrunner
-Version: 0.6.12
+Version: 0.6.14
 Release: 1
 License: GPLv2
 Summary: A utility that parses header and typesystem files
@@ -8,7 +8,7 @@ URL: http://www.pyside.org
 Source0:  http://www.pyside.org/files/%name-%version.tar.bz2
 BuildRequires: cmake
 BuildRequires: qt4-devel
-BuildRequires: apiextractor-devel >= 0.10.6
+BuildRequires: apiextractor-devel >= 0.10.8
 Conflicts: %{_lib}gen0 < 0.3.3
 Obsoletes: boostpythongenerator < 0.6.0
 
@@ -16,7 +16,8 @@ Obsoletes: boostpythongenerator < 0.6.0
 Generator is a utility that parses a collecion of header and typesystem
 files, generating other files (code, documentation, etc.) as result.
 
-%files 
+%files
+%defattr(-,root,root,-)
 %{_bindir}/*
 %{_libdir}/generatorrunner
 %{_mandir}/man1/*.1.*
@@ -34,6 +35,7 @@ Group: System/Libraries
 Generator core lib.
 
 %files -n %{libgen}
+%defattr(-,root,root)
 %{_libdir}/libgenrunner.so.%{libgen_major}*
 
 #------------------------------------------------------------------------------
@@ -50,6 +52,7 @@ Obsoletes: boostpythongenerator-devel < 0.3.3
 Devel stuff for Generator.
 
 %files devel
+%defattr(-,root,root)
 %{_includedir}/*
 %{_libdir}/libgenrunner.so
 %{_libdir}/pkgconfig/*

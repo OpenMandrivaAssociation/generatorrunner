@@ -4,7 +4,7 @@ Release:	1
 License:	GPLv2
 Summary:	A utility that parses header and typesystem files
 Group:		Development/KDE and Qt
-URL:		http://www.pyside.org
+URL:		https://www.pyside.org
 Source0:	http://www.pyside.org/files/%{name}-%{version}.tar.bz2
 BuildRequires:	cmake
 BuildRequires:	qt4-devel
